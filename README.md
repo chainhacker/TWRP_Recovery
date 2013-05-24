@@ -1,4 +1,4 @@
-TWRP_Recovery
+TWRP Recovery
 =============
 
 Recovery folder of TWRP
