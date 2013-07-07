@@ -48,7 +48,7 @@
 		<variable name="col1_x" value="0" />
 		<variable name="col1_x2" value="101" />
 		<variable name="col2_x" value="122" />
-		<variable name="col_center_x" value="64" />
+		<variable name="col_center_x" value="2" />
 		<variable name="col_center_medium_x" value="92" />
 		<variable name="center_x" value="120" />
 		<variable name="center1_x" value="135" />
@@ -104,8 +104,8 @@
 		<variable name="row6_medium_y" value="227" />
 		<variable name="row7_medium_y" value="261" />
 		<variable name="slider_x" value="29" />
-		<variable name="slider_y" value="190" />
-		<variable name="slider_text_y" value="180" />
+		<variable name="slider_y" value="180" />
+		<variable name="slider_text_y" value="190" />
 		<variable name="button_text_color" value="#999999" />
 		<variable name="text_color" value="#707070" />
 		<variable name="text_color1" value="#707070" />
@@ -566,47 +566,44 @@
 				<text>software and render your device unusable.</text>
 			</object>
 
+
 			<object type="text" color="%text_color%">
 				<font resource="font" />
 				<placement x="%center_x%" y="%row3_text_y%" placement="5" />
-				<text>Folder:</text>
-			</object>
-
-			<object type="text" color="%text_color%">
-				<font resource="mediumfont" />
-				<placement x="%center_x%" y="%row4_text_y%" placement="5" />
-				<text>%tw_zip_location%</text>
-			</object>
-
-			<object type="text" color="%text_color%">
-				<font resource="font" />
-				<placement x="%center_x%" y="%row5_text_y%" placement="5" />
 				<text>File to flash:</text>
 			</object>
 
 			<object type="text" color="%text_color%">
 				<font resource="mediumfont" />
-				<placement x="%center_x%" y="%row6_text_y%" placement="5" />
+				<placement x="%center_x%" y="%row4_text_y%" placement="5" />
 				<text>%tw_file%</text>
 			</object>
 
 			<object type="text" color="%text_color%">
 				<font resource="font" />
-				<placement x="%center_x%" y="%row7_text_y%" placement="5" />
+				<placement x="%center_x%" y="%row5_text_y%" placement="5" />
 				<text>Press back to cancel adding this zip.</text>
 			</object>
 
 			<object type="checkbox">
-				<placement x="%col1_x%" y="%row8_text_y%" />
+				<placement x="%col1_x%" y="%row6_text_y%" />
 				<font resource="font" color="%text_color%" />
 				<text>Zip file signature verification.</text>
 				<data variable="tw_signed_zip_verify" />
 				<image checked="checkbox_true" unchecked="checkbox_false" />
 			</object>
 
+			<object type="checkbox">
+				<placement x="%col1_x%" y="%row7_text_y%" />
+				<font resource="font" color="%text_color%" />
+				<text>Force MD5 check on all zips.</text>
+				<data variable="tw_force_md5_check" />
+				<image checked="checkbox_true" unchecked="checkbox_false" />
+			</object>
+
 			<object type="text" color="%text_color%">
 				<font resource="font" />
-				<placement x="%center_x%" y="%row9_text_y%" placement="5" />
+				<placement x="%center_x%" y="%row8_text_y%" placement="5" />
 				<text>File %tw_zip_queue_count% of max of 10</text>
 			</object>
 
@@ -955,7 +952,7 @@
 
 			<object type="button">
 				<condition var1="tw_show_reboot" var2="0" />
-				<placement x="%col_center_x%" y="%row4_y%" />
+				<placement x="%col_center_x%" y="%row8_y%" />
 				<font resource="font" color="%button_text_color%" />
 				<text>Back</text>
 				<image resource="main_button" />
@@ -967,7 +964,7 @@
 
 			<object type="button">
 				<condition var1="tw_show_reboot" var2="1" />
-				<placement x="%col_center_x%" y="%row4_y%" />
+				<placement x="%col_center_x%" y="%row8_y%" />
 				<font resource="font" color="%button_text_color%" />
 				<text>Reboot System</text>
 				<image resource="main_button" />
